@@ -12,9 +12,9 @@ import lombok.RequiredArgsConstructor;
 import sholomiy.yuriy.catalogue.entity.Catalogue;
 import sholomiy.yuriy.catalogue.service.CatalogueService;
 
-@RestController
 @RequestMapping("/api/v1/catalogue")
 @RequiredArgsConstructor
+@RestController
 public class CatalogueController {
 
 	private final CatalogueService catalogueService;

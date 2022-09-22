@@ -14,15 +14,15 @@ import sholomiy.yuriy.inventory.dto.ProductDTO;
 import sholomiy.yuriy.inventory.entity.Inventory;
 import sholomiy.yuriy.inventory.service.InventoryService;
 
-@RestController
 @RequestMapping("/api/v1/inventory")
 @RequiredArgsConstructor
+@RestController
 public class InventoryController {
 
 	private final InventoryService inventoryService;
 
 	@GetMapping
-	public ResponseEntity<Collection<Inventory>> getCatalogue() {
+	public ResponseEntity<Collection<Inventory>> getInventory() {
 		final Collection<Inventory> inventory = inventoryService.getInventory();
 		return inventory == null || inventory.isEmpty() ? ResponseEntity.noContent().build()
 				: ResponseEntity.ok(inventory);
